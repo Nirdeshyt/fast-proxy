@@ -91,11 +91,4 @@ app.get('/fetch', async (req: Request, res: Response) => {
 });
 
 // Start server
-app.listen(port, host, () => {
-  console.log(`M3U8 Proxy Server running at http://${host}:${port}`);
-  if (allowedOrigins.length > 0) {
-    console.log(`Allowed origins: ${allowedOrigins.join(', ')}`);
-  } else {
-    console.log('Allowed origins: All (*)');
-  }
-});
+export default app;
